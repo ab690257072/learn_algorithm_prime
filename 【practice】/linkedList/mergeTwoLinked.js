@@ -1,18 +1,12 @@
-/**
- * @function 合并两有序链表
- */
-function ListNode(val, next) {
-  this.val = val || 0;
-  this.next = next || null;
-}
-function mergeTwoLists(head1, head2) {
+// 合并两有序链表
+function mergeTwolists(head1, head2) {
   if(head1 == null || head2 == null) {
     return head1 == null ? head2 : head1;
   }
-  let head = head1.val <= head2.val ? head1 : head2;
-  let pre = head;
-  let cur1 = head.next;
-  let cur2 = head == head1 ? head2 : head1;
+  let head = head1.val <= head2.val ? head1 : head2,
+      pre = head,
+      cur1 = head.next,
+      cur2 = head == head1 ? head2 : head1;
   while(cur1 != null && cur2 != null) {
     if(cur1.val <= cur2.val) {
       pre.next = cur1;

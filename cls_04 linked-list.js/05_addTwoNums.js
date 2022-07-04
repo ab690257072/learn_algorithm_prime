@@ -19,7 +19,7 @@ function addTwoNumbers(head1, head2) {
   while(curS != null) {
     curNum = curL.val + curS.val + carry;
     curL.val = curNum % 10;
-    carry = curNum / 10;
+    carry = Math.floor(curNum / 10);
     last = curL;
     curL = curL.next;
     curS = curS.next;
@@ -27,7 +27,7 @@ function addTwoNumbers(head1, head2) {
   while(curL != null) {
     curNum = curL.val + carry;
     curL.val = curNum % 10;
-    carry = curNum / 10;
+    carry = Math.floor(curNum / 10);
     last = curL;
     curL = curL.next;
   }

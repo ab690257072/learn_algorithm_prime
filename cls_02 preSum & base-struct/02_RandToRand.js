@@ -72,7 +72,7 @@ function random(randomBox, from, to) {
   }
   let range = to - from;
   let num = 1;
-  while((num << 1) - 1 < range) {
+  while((1 << num) - 1 < range) {
     num++;
   }
   let ans = 0;
