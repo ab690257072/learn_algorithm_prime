@@ -60,7 +60,7 @@ function rand01(randomBox) {
   // 获取等概率0/1
   let ans = 0;
   do {
-    ans = randomBox.random() - min;
+    ans = randomBox.random() - min; // 下面是用ans < mid 判断的，mid是数量的一半，而不是范围内的中位数，所以这里减去min
   } while(odd && ans == mid);
 
   return ans < mid ? 0 : 1;

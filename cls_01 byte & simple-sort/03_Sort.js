@@ -45,7 +45,7 @@ function insertSort1(arr) {
   // 0~0范围已经有序，所以从0~n-i范围内实现有序
   for(let i = 1; i < len; i++) {
     // 右侧小值往左插，直到0~n-i范围内有序
-    for(let j = i; j >= 0; j--) {
+    for(let j = i; j >= 1; j--) {
       if(arr[j] < arr[j - 1]) {
         swap(arr, j - 1, j);
       } else {
