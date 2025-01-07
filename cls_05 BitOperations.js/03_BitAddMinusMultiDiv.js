@@ -2,7 +2,7 @@
  * @function 位运算实现加减乘除
  * https://leetcode.com/problems/divide-two-integers
  */
-// MAX_SAFE_INTEGER是浮点数精度边界，2^53，本题需要的是数值最大范围 2^31
+// MAX_SAFE_INTEGER是浮点数精度边界，2^53，本题需要的是整数最大范围 2^31
 const MAX_VALUE = Math.pow(2, 31) - 1;
 const MIN_VALUE = - Math.pow(2, 31);
 
